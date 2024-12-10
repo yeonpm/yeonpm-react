@@ -31,7 +31,6 @@ const config = [
       peerDepsExternal(),
       resolve({
         preferBuiltins: true,
-        external: ["next", "next/navigation"],
       }),
       commonjs({
         esmExternals: true,
@@ -49,13 +48,13 @@ const config = [
           esModuleInterop: true,
           strict: true,
           skipLibCheck: true,
-          jsx: "react",
+          jsx: "react-jsx",
           forceConsistentCasingInFileNames: true,
           noImplicitReturns: true,
           noImplicitThis: true,
           noImplicitAny: true,
           strictNullChecks: true,
-          noUnusedLocals: true,
+          noUnusedLocals: false,
           noUnusedParameters: true,
         },
         include: ["src/**/*"],
@@ -64,7 +63,6 @@ const config = [
       terser(),
     ],
     external: [
-      "next",
       "next/navigation",
       "@emotion/react",
       "@emotion/styled",
