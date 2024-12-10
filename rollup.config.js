@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import { dts } from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import useClientPlugin from "./rollup-plugin-use-client.js";
 
 const config = [
   {
@@ -26,6 +27,7 @@ const config = [
       },
     ],
     plugins: [
+      useClientPlugin(),
       peerDepsExternal(),
       resolve(),
       commonjs(),
