@@ -1,6 +1,6 @@
 {
   "name": "@yeonpm/react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library that collects frequently used components and custom hooks in react projects",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yeonpm/yeonpm-react/.git"
+    "url": "git+https://github.com/yeonpm/yeonpm-react.git"
   },
-  "homepage": "https://github.com/yeonpm/yeonpm-reacts",
+  "homepage": "https://github.com/yeonpm/yeonpm-react",
   "bugs": {
     "url": "https://github.com/yeonpm/yeonpm-react/issues"
   },
