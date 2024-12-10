@@ -1,5 +1,3 @@
-"use client";
-
 import React, { ReactElement, Ref, forwardRef, memo } from "react";
 import styled from "@emotion/styled";
 import { resolveProps } from "react-style-props";
