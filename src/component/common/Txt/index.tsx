@@ -11,10 +11,10 @@ const Txt = forwardRef(
     ref?: Ref<HTMLDivElement>
   ): ReactElement => {
     const { styleString, otherProps } = resolveProps(props as any);
-    const StyledTxt = span ? StyledTxtSpan : StyledTxtP;
+    const $Txt = span ? $TxtSpan : $TxtP;
 
     return (
-      <StyledTxt
+      <$Txt
         ref={ref}
         css={styleString}
         {...otherProps}
@@ -23,17 +23,17 @@ const Txt = forwardRef(
         }`}
       >
         {children}
-      </StyledTxt>
+      </$Txt>
     );
   }
 );
 
 export default memo(Txt);
 
-const StyledTxtP = styled("p")<{ css?: string }>`
+const $TxtP = styled("p")<{ css?: string }>`
   ${({ css }) => css}
 `;
 
-const StyledTxtSpan = styled("span")<{ css?: string }>`
+const $TxtSpan = styled("span")<{ css?: string }>`
   ${({ css }) => css}
 `;
