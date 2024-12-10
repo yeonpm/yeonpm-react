@@ -41,6 +41,7 @@
     "@rollup/plugin-node-resolve": "15.3.0",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "12.1.1",
+    "@types/next": "9.0.0",
     "@types/react": "19.0.1",
     "rollup-plugin-dts": "6.1.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
@@ -63,9 +64,9 @@
     "url": "https://github.com/yeonpm/yeonpm-react/issues"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
+    "@emotion/react": ">=11.11.0",
     "@emotion/styled": ">=11.11.0",
-    "@emotion/react": ">=11.11.0"
+    "react": ">=16.8.0"
   },
   "dependencies": {
     "react-style-props": "1.0.23"
