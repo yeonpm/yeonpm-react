@@ -29,8 +29,14 @@ const config = [
     plugins: [
       useClientPlugin(),
       peerDepsExternal(),
-      resolve(),
-      commonjs(),
+      resolve({
+        preferBuiltins: true,
+        external: ["next", "next/navigation"],
+      }),
+      commonjs({
+        esmExternals: true,
+        requireReturnsDefault: "auto",
+      }),
       typescript({
         tsconfig: false,
         compilerOptions: {
@@ -56,6 +62,14 @@ const config = [
         exclude: ["node_modules", "dist"],
       }),
       terser(),
+    ],
+    external: [
+      "next",
+      "next/navigation",
+      "@emotion/react",
+      "@emotion/styled",
+      "react",
+      "react-dom",
     ],
   },
   {
