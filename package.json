@@ -1,6 +1,6 @@
 {
   "name": "@yeonpm/react",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "A library that collects frequently used components and custom hooks in react projects",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -68,6 +68,6 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "react-style-props": "1.0.23"
+    "react-style-props": "1.0.26"
   }
 }
