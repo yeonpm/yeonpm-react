@@ -62,13 +62,7 @@ const config = [
       }),
       terser(),
     ],
-    external: [
-      "next/navigation",
-      "@emotion/react",
-      "@emotion/styled",
-      "react",
-      "react-dom",
-    ],
+    external: ["@emotion/react", "@emotion/styled", "react", "react-dom"],
   },
   {
     input: "src/index.ts",
