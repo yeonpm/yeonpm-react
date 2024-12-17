@@ -12,6 +12,7 @@ const NavigationBar = ({
   onClickSignOut,
   signOutLabel,
   router,
+  pathname,
 }: {
   navigationConfigs: NavigationConfigs;
   logo: React.ReactNode;
@@ -21,6 +22,7 @@ const NavigationBar = ({
    * @description nextjs navigation: router
    */
   router: any;
+  pathname: string;
 }) => {
   return (
     <Wrapper
@@ -40,6 +42,7 @@ const NavigationBar = ({
             <NavigationItem
               key={index}
               router={router}
+              pathname={pathname}
               config={config}
               depth={0}
               routePrefix={navigationConfigs.routePrefix}
@@ -75,11 +78,11 @@ const NavigationItem = ({
   routePrefix,
   parentPath,
   router,
+  pathname,
 }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasChildren = config.children && config.children.length > 0;
   const path = `${parentPath ? `/${parentPath}` : ""}/${config.value}`;
-  const pathname = window.location.pathname;
   const isNowPath = `${routePrefix}${path}` === pathname;
   const handleClick = () => {
     if (hasChildren) {
