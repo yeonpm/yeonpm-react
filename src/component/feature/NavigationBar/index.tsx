@@ -33,7 +33,9 @@ export const NavigationBarLayout = ({
         router={router}
         pathname={pathname}
       />
-      <Wrapper className="main-layout-body-wrapper">{children}</Wrapper>
+      <Wrapper className="main-layout-body-wrapper" fullP>
+        {children}
+      </Wrapper>
     </Wrapper>
   );
 };
