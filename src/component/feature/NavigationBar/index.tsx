@@ -4,7 +4,39 @@ import { useState } from "react";
 import Wrapper from "../../common/Wrapper";
 import Txt from "../../common/Txt";
 import { capitalize } from "yeonpm-modules";
-import { ArrowIconProps, NavigationConfig, NavigationConfigs } from "./type";
+import {
+  ArrowIconProps,
+  NavigationBarLayoutProps,
+  NavigationBarProps,
+  NavigationConfig,
+} from "./type";
+
+export const NavigationBarLayout = ({
+  navigationConfigs,
+  router,
+  pathname,
+  logo,
+  children,
+}: NavigationBarLayoutProps) => {
+  return (
+    <Wrapper
+      className="main-layout-wrapper"
+      overflowX="hidden"
+      overflowY="auto"
+      flex
+      fullV
+      bg="#F9FAFB"
+    >
+      <NavigationBar
+        navigationConfigs={navigationConfigs}
+        logo={logo}
+        router={router}
+        pathname={pathname}
+      />
+      <Wrapper className="main-layout-body-wrapper">{children}</Wrapper>
+    </Wrapper>
+  );
+};
 
 const NavigationBar = ({
   navigationConfigs,
@@ -13,20 +45,10 @@ const NavigationBar = ({
   signOutLabel,
   router,
   pathname,
-}: {
-  navigationConfigs: NavigationConfigs;
-  logo: React.ReactNode;
-  onClickSignOut?: () => void;
-  signOutLabel?: string;
-  /**
-   * @description nextjs navigation: router
-   */
-  router: any;
-  pathname: string;
-}) => {
+}: NavigationBarProps) => {
   return (
     <Wrapper
-      className="navigation-bar"
+      className="main-layout-navigation-bar-wrapper"
       h={"100%"}
       minWidth={230}
       bg={"#ffffff"}
