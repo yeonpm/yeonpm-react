@@ -11,16 +11,16 @@ const NavigationBar = ({
   logo,
   onClickSignOut,
   signOutLabel,
-  route,
+  router,
 }: {
   navigationConfigs: NavigationConfigs;
   logo: React.ReactNode;
   onClickSignOut?: () => void;
   signOutLabel?: string;
   /**
-   * @description nextjs navigation: route
+   * @description nextjs navigation: router
    */
-  route: any;
+  router: any;
 }) => {
   return (
     <Wrapper
@@ -39,7 +39,7 @@ const NavigationBar = ({
           (config: NavigationConfig, index: number) => (
             <NavigationItem
               key={index}
-              route={route}
+              router={router}
               config={config}
               depth={0}
               routePrefix={navigationConfigs.routePrefix}
@@ -74,7 +74,7 @@ const NavigationItem = ({
   depth,
   routePrefix,
   parentPath,
-  route,
+  router,
 }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasChildren = config.children && config.children.length > 0;
@@ -85,7 +85,7 @@ const NavigationItem = ({
     if (hasChildren) {
       setIsOpen(!isOpen);
     } else {
-      route.push(`${routePrefix}${path}`);
+      router.push(`${routePrefix}${path}`);
     }
   };
 
