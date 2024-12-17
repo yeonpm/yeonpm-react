@@ -110,7 +110,7 @@ const NavigationItem = ({
             }}
             textDecoration={isNowPath ? "underline" : "none"}
           >
-            {capitalize(config.label)}
+            {capitalize(config.label || config.value)}
           </Txt>
           <ArrowIcon isOpen={isOpen} enable={hasChildren} />
         </Wrapper>

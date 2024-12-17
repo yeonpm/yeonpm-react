@@ -4,7 +4,7 @@ export interface NavigationConfigs {
 }
 
 export interface NavigationConfig {
-  label: string;
+  label?: string;
   value: string;
   children?: NavigationConfig[];
 }
