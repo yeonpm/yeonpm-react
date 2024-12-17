@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Wrapper from "../../common/Wrapper";
 import Txt from "../../common/Txt";
