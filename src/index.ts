@@ -18,3 +18,7 @@ export type {
   NavigationBarProps,
   NavigationBarLayoutProps,
 } from "./component/feature/NavigationBar/type";
+
+// LoadingIndicator
+export { default as LoadingIndicator } from "./component/common/LoadingIndicator";
+export type { LoadingIndicatorProps } from "./component/common/LoadingIndicator/type";
