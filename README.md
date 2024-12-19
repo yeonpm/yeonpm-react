@@ -16,7 +16,7 @@ A library that collects frequently used components and custom hooks in react pro
 
 - `<Wrapper />`
 - `<Txt />`
-- `<NavigationBar />, <NavigationBarLayout />`
+- `<NavigationBar />`
 - `<LoadingIndicator />`
 
 ### custom hook
