@@ -305,125 +305,125 @@ export const text16L = {
   lineHeight: "160%",
 };
 
-export const body14B = {
+export const text14B = {
   fontSize: 14,
   fontWeight: 800,
   lineHeight: "160%",
 };
-export const body14SB = {
+export const text14SB = {
   fontSize: 14,
   fontWeight: 700,
   lineHeight: "160%",
 };
-export const body14M = {
+export const text14M = {
   fontSize: 14,
   fontWeight: 600,
   lineHeight: "160%",
 };
-export const body14SM = {
+export const text14SM = {
   fontSize: 14,
   fontWeight: 500,
   lineHeight: "160%",
 };
-export const body14R = {
+export const text14R = {
   fontSize: 14,
   fontWeight: 400,
   lineHeight: "160%",
 };
-export const body14L = {
+export const text14L = {
   fontSize: 14,
   fontWeight: 300,
   lineHeight: "160%",
 };
 
-export const body12B = {
+export const text12B = {
   fontSize: 12,
   fontWeight: 800,
   lineHeight: "160%",
 };
-export const body12SB = {
+export const text12SB = {
   fontSize: 12,
   fontWeight: 700,
   lineHeight: "160%",
 };
-export const body12M = {
+export const text12M = {
   fontSize: 12,
   fontWeight: 600,
   lineHeight: "160%",
 };
-export const body12SM = {
+export const text12SM = {
   fontSize: 12,
   fontWeight: 500,
   lineHeight: "160%",
 };
-export const body12R = {
+export const text12R = {
   fontSize: 12,
   fontWeight: 400,
   lineHeight: "160%",
 };
-export const body12L = {
+export const text12L = {
   fontSize: 12,
   fontWeight: 300,
   lineHeight: "160%",
 };
 
-export const body10B = {
+export const text10B = {
   fontSize: 10,
   fontWeight: 800,
   lineHeight: "160%",
 };
-export const body10SB = {
+export const text10SB = {
   fontSize: 10,
   fontWeight: 700,
   lineHeight: "160%",
 };
-export const body10M = {
+export const text10M = {
   fontSize: 10,
   fontWeight: 600,
   lineHeight: "160%",
 };
-export const body10SM = {
+export const text10SM = {
   fontSize: 10,
   fontWeight: 500,
   lineHeight: "160%",
 };
-export const body10R = {
+export const text10R = {
   fontSize: 10,
   fontWeight: 400,
   lineHeight: "160%",
 };
-export const body10L = {
+export const text10L = {
   fontSize: 10,
   fontWeight: 300,
   lineHeight: "160%",
 };
 
-export const body8B = {
+export const text8B = {
   fontSize: 8,
   fontWeight: 800,
   lineHeight: "160%",
 };
-export const body8SB = {
+export const text8SB = {
   fontSize: 8,
   fontWeight: 700,
   lineHeight: "160%",
 };
-export const body8M = {
+export const text8M = {
   fontSize: 8,
   fontWeight: 600,
   lineHeight: "160%",
 };
-export const body8SM = {
+export const text8SM = {
   fontSize: 8,
   fontWeight: 500,
   lineHeight: "160%",
 };
-export const body8R = {
+export const text8R = {
   fontSize: 8,
   fontWeight: 400,
   lineHeight: "160%",
 };
-export const body8L = {
+export const text8L = {
   fontSize: 8,
   fontWeight: 300,
   lineHeight: "160%",
