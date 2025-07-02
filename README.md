@@ -273,19 +273,19 @@ function MyComponent() {
   return (
     <div>
       {/* Main title */}
-      <Txt {...heading34B}>Main Page Title</Txt>
+      <Txt heading34B>Main Page Title</Txt>
 
       {/* Section title */}
-      <Txt {...heading28M}>Section Title</Txt>
+      <Txt heading28M>Section Title</Txt>
 
       {/* Body text */}
-      <Txt {...text16R}>This is body text.</Txt>
+      <Txt text16R>This is body text.</Txt>
 
       {/* Emphasized text */}
-      <Txt {...text14SM}>Important information</Txt>
+      <Txt text14SM>Important information</Txt>
 
       {/* Additional information */}
-      <Txt {...text12L}>Small additional info</Txt>
+      <Txt text12L>Small additional info</Txt>
     </div>
   );
 }
