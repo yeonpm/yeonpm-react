@@ -181,6 +181,86 @@ All components support the `css` prop for applying inline CSS styles directly.
 - `size`: number - Loading indicator size (default: 24)
 - All style props from `react-style-props` supported
 
+###### `<NavigationBar />`
+
+- `navigationConfigs`: NavigationConfigs - Navigation configuration object
+- `logo`: React.ReactNode - Logo component
+- `onClickSignOut?`: () => void - Sign out click handler (optional)
+- `signOutLabel?`: string - Sign out button text (default: "sign out")
+- `router`: any - Next.js router object
+- `pathname`: string - Current path
+- All style props from `react-style-props` supported
+
+**NavigationConfigs Interface:**
+
+```typescript
+interface NavigationConfigs {
+  routePrefix: string; // Route prefix
+  configs: NavigationConfig[]; // Navigation configuration array
+}
+```
+
+**NavigationConfig Interface:**
+
+```typescript
+interface NavigationConfig {
+  label?: string; // Display label (default: value)
+  value: string; // Route value
+  children?: NavigationConfig[]; // Sub-menu items (optional)
+}
+```
+
+**Usage Example:**
+
+```typescript
+import { NavigationBar } from "@yeonpm/react";
+
+const navigationConfigs = {
+  routePrefix: "/admin",
+  configs: [
+    {
+      label: "Dashboard",
+      value: "dashboard",
+      icon: <DashboardIcon />,
+    },
+    {
+      label: "User Management",
+      value: "users",
+      icon: <UserIcon />,
+      children: [
+        {
+          label: "User List",
+          value: "list",
+        },
+        {
+          label: "Permission Management",
+          value: "permissions",
+        },
+      ],
+    },
+  ],
+};
+
+<NavigationBar
+  navigationConfigs={navigationConfigs}
+  logo={<Logo />}
+  router={router}
+  pathname={pathname}
+  onClickSignOut={() => handleSignOut()}
+  signOutLabel="Sign Out"
+/>;
+```
+
+**Key Features:**
+
+- Hierarchical menu structure support (unlimited depth)
+- Current path highlighting
+- Expand/collapse animations
+- Logo area
+- Sign out button
+- Responsive design
+- Mouse hover effects
+
 ### custom hook
 
 <!-- - `useDebounce`
