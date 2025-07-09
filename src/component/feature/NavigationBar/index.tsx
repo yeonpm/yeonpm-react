@@ -128,8 +128,13 @@ const NavigationItem = ({
         white
         flex
         gap={16}
+        w="100%"
       >
-        {config.icon && <Wrapper>{config.icon}</Wrapper>}
+        {config.icon && (
+          <Wrapper className="navigation-item-icon" px={8} h="100%" ac jc>
+            {config.icon}
+          </Wrapper>
+        )}
         <Wrapper pl={depth * 20 + 16} pr={16} ac h="100%">
           <Txt
             fv={{
