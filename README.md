@@ -14,16 +14,18 @@ A library that collects frequently used components and custom hooks in react pro
 
 ### component
 
-- `<Wrapper />`
-- `<Txt />`
-- `<NavigationBar />`
-- `<LoadingIndicator />`
+- [`<Wrapper />`](#wrapper)
+- [`<Txt />`](#txt)
+- [`<NavigationBar />`](#navigationbar)
+- [`<LoadingIndicator />`](#loadingindicator)
+
+#### [CSS Property](#css-property)
 
 #### component properties
 
 All components support style props from `react-style-props`.
 
-##### "css" Property
+##### <a id="css-property"></a>"css" Property
 
 All components support the `css` prop for applying inline CSS styles directly.
 
@@ -165,23 +167,23 @@ All components support the `css` prop for applying inline CSS styles directly.
 
 ##### Component-specific Additional Props
 
-###### `<Wrapper />`
+###### <a id="wrapper"></a>`<Wrapper />`
 
 - All HTML div attributes supported
 - All style props from `react-style-props` supported
 
-###### `<Txt />`
+###### <a id="txt"></a>`<Txt />`
 
 - `span`: boolean - Use span tag (default: false, uses p tag)
 - All HTML p/span attributes supported
 - All style props from `react-style-props` supported
 
-###### `<LoadingIndicator />`
+###### <a id="loadingindicator"></a>`<LoadingIndicator />`
 
 - `size`: number - Loading indicator size (default: 24)
 - All style props from `react-style-props` supported
 
-###### `<NavigationBar />`
+###### <a id="navigationbar"></a>`<NavigationBar />`
 
 - `navigationConfigs`: NavigationConfigs - Navigation configuration object
 - `logo`: React.ReactNode - Logo component
@@ -271,9 +273,9 @@ const navigationConfigs = {
 
 ### const
 
-- `fontVariant`
+- [`fontVariant`](#fontvariant)
 
-#### Font System
+#### <a id="fontvariant"></a>Font System
 
 `fontVariant` is a collection of font style constants that provides a consistent typography system.
 
