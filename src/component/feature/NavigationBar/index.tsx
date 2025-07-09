@@ -127,11 +127,10 @@ const NavigationItem = ({
         mouseCss
         white
         flex
-        gap={16}
         w="100%"
       >
         {config.icon && (
-          <Wrapper className="navigation-item-icon" px={8} h="100%" ac jc>
+          <Wrapper className="navigation-item-icon" pl={24} h="100%" ac jc>
             {config.icon}
           </Wrapper>
         )}
