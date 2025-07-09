@@ -57,9 +57,11 @@ const NavigationBar = ({
       column
       borderRight={"1px solid #f2f2f2"}
     >
-      <Wrapper w="100%" ac h={100} jc>
-        {logo}
-      </Wrapper>
+      {logo && (
+        <Wrapper w="100%" ac h={100} jc>
+          {logo}
+        </Wrapper>
+      )}
       <Wrapper flex1 overflowY="auto">
         {navigationConfigs.configs.map(
           (config: NavigationConfig, index: number) => (
@@ -124,8 +126,10 @@ const NavigationItem = ({
         onClick={handleClick}
         mouseCss
         white
+        flex
+        gap={16}
       >
-        {config.icon}
+        {config.icon && <Wrapper>{config.icon}</Wrapper>}
         <Wrapper pl={depth * 20 + 16} pr={16} ac h="100%">
           <Txt
             fv={{

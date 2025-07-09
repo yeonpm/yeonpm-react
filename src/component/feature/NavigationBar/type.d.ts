@@ -6,7 +6,7 @@ export interface NavigationBarLayoutProps extends NavigationBarProps {
 
 export interface NavigationBarProps {
   navigationConfigs: NavigationConfigs;
-  logo: React.ReactNode;
+  logo?: React.ReactNode;
   onClickSignOut?: () => void;
   signOutLabel?: string;
   /**
@@ -17,7 +17,7 @@ export interface NavigationBarProps {
 }
 
 export interface NavigationConfigs {
-  routePrefix: string;
+  routePrefix?: string;
   configs: NavigationConfig[];
 }
 
