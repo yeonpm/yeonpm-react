@@ -23,14 +23,41 @@ A library that collects frequently used components and custom hooks in react pro
 
 All components support style props from `react-style-props`.
 
+##### "css" Property
+
+All components support the `css` prop for applying inline CSS styles directly.
+
+```typescript
+// Basic usage
+<Txt css="color: red; font-size: 16px;">Text</Txt>
+<Wrapper css="background: blue; padding: 20px;">Container</Wrapper>
+
+// Using template literals
+<Wrapper css={`
+  border: 1px solid ${isActive ? 'red' : 'black'};
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  .child-element {
+    display: block;
+    @keyframes bling { ... }
+    &:hover { ... }
+    &:active { ... }
+    &:focus { ... }
+  }
+`}>
+  Dynamic styling
+</Txt>
+```
+
+**Note**: The `css` property can be used alongside other style props, and the `css` prop takes precedence.
+
 ##### Layout Props
 
 - `flex`: Enable flex display (boolean)
-- `jc`: Enable flex and justify-content: center (boolean)
-- `ac`: Enable flex and align-items: center (boolean)
-- `between`: Enable flex with justify-content: space-between (boolean)
-- `column`, `col`: Enable flex with flex-direction: column (boolean)
-- `row`: Enable flex with flex-direction: row (boolean)
+- `jc`: Enable display: flex and justify-content: center (boolean)
+- `ac`: Enable display: flex and align-items: center (boolean)
+- `between`: Enable display: flex with justify-content: space-between (boolean)
+- `column`, `col`: Enable display: flex with flex-direction: column (boolean)
+- `row`: Enable display: flex with flex-direction: row (boolean)
 - `absolute`, `fixed`, `relative`, `sticky`: Set position (boolean)
 - `flexDirection`: Set flex-direction (string)
 - `alignItems`: Set align-items (string)
@@ -173,12 +200,10 @@ All components support style props from `react-style-props`.
 ##### Usage
 
 ```typescript
-import { heading34B, text16R, text14M } from '@yeonpm/react';
-
 // Use in components
-<Txt {...heading34B}>Title Text</Txt>
-<Txt {...text16R}>Body Text</Txt>
-<Txt {...text14M}>Emphasized Text</Txt>
+<Txt heading34B>Title Text</Txt>
+<Txt text16R>Body Text</Txt>
+<Txt text14M>Emphasized Text</Txt>
 ```
 
 ##### Font Style Classification
@@ -261,13 +286,6 @@ Each size provides 6 different weights:
 
 ```typescript
 import { Txt } from "@yeonpm/react";
-import {
-  heading34B,
-  heading28M,
-  text16R,
-  text14SM,
-  text12L,
-} from "@yeonpm/react";
 
 function MyComponent() {
   return (
@@ -276,16 +294,16 @@ function MyComponent() {
       <Txt heading34B>Main Page Title</Txt>
 
       {/* Section title */}
-      <Txt {...heading28M}>Section Title</Txt>
+      <Txt heading28M>Section Title</Txt>
 
       {/* Body text */}
-      <Txt {...text16R}>This is body text.</Txt>
+      <Txt text16R>This is body text.</Txt>
 
       {/* Emphasized text */}
-      <Txt {...text14SM}>Important information</Txt>
+      <Txt text14SM>Important information</Txt>
 
       {/* Additional information */}
-      <Txt {...text12L}>Small additional info</Txt>
+      <Txt text12L>Small additional info</Txt>
     </div>
   );
 }

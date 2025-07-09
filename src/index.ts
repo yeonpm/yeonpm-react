@@ -22,6 +22,3 @@ export type {
 // LoadingIndicator
 export { default as LoadingIndicator } from "./component/common/LoadingIndicator";
 export type { LoadingIndicatorProps } from "./component/common/LoadingIndicator/type";
-
-// fontVariant
-export * from "./const/fontVariant";
