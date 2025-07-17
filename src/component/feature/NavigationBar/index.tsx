@@ -17,6 +17,7 @@ export const NavigationBarLayout = ({
   pathname,
   logo,
   children,
+  disableSignUpButton,
 }: NavigationBarLayoutProps) => {
   return (
     <Wrapper
@@ -32,6 +33,7 @@ export const NavigationBarLayout = ({
         logo={logo}
         router={router}
         pathname={pathname}
+        disableSignUpButton={disableSignUpButton}
       />
       <Wrapper className="main-layout-body-wrapper" fullP>
         {children}
@@ -47,6 +49,7 @@ const NavigationBar = ({
   signOutLabel,
   router,
   pathname,
+  disableSignUpButton = false,
 }: NavigationBarProps) => {
   return (
     <Wrapper
@@ -76,22 +79,28 @@ const NavigationBar = ({
           )
         )}
       </Wrapper>
-      <Wrapper
-        h={100}
-        ac
-        jc
-        onClick={() =>
-          onClickSignOut
-            ? onClickSignOut()
-            : (window.location.href = "/signOut")
-        }
-      >
-        <Wrapper white mouseCss>
-          <Txt fv={{ fontSize: 14 }} color="#afafaf" textDecoration="underline">
-            {signOutLabel || "sign out"}
-          </Txt>
+      {!disableSignUpButton && (
+        <Wrapper
+          h={100}
+          ac
+          jc
+          onClick={() =>
+            onClickSignOut
+              ? onClickSignOut()
+              : (window.location.href = "/signOut")
+          }
+        >
+          <Wrapper white mouseCss>
+            <Txt
+              fv={{ fontSize: 14 }}
+              color="#afafaf"
+              textDecoration="underline"
+            >
+              {signOutLabel || "sign out"}
+            </Txt>
+          </Wrapper>
         </Wrapper>
-      </Wrapper>
+      )}
     </Wrapper>
   );
 };

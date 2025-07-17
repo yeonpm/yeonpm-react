@@ -2,6 +2,7 @@ import React from "react";
 
 export interface NavigationBarLayoutProps extends NavigationBarProps {
   children: React.ReactNode;
+  disableSignUpButton?: boolean;
 }
 
 export interface NavigationBarProps {
@@ -14,6 +15,7 @@ export interface NavigationBarProps {
    */
   router: any;
   pathname: string;
+  disableSignUpButton?: boolean;
 }
 
 export interface NavigationConfigs {
