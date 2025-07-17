@@ -191,6 +191,7 @@ All components support the `css` prop for applying inline CSS styles directly.
 - `signOutLabel?`: string - Sign out button text (default: "sign out")
 - `router`: any - Next.js router object
 - `pathname`: string - Current path
+- `disableSignOutButton?`: boolean - Hide sign out button (default: false)
 - All style props from `react-style-props` supported
 
 **NavigationConfigs Interface:**

@@ -17,7 +17,7 @@ export const NavigationBarLayout = ({
   pathname,
   logo,
   children,
-  disableSignUpButton,
+  disableSignOutButton,
 }: NavigationBarLayoutProps) => {
   return (
     <Wrapper
@@ -33,7 +33,7 @@ export const NavigationBarLayout = ({
         logo={logo}
         router={router}
         pathname={pathname}
-        disableSignUpButton={disableSignUpButton}
+        disableSignOutButton={disableSignOutButton}
       />
       <Wrapper className="main-layout-body-wrapper" fullP>
         {children}
@@ -49,7 +49,7 @@ const NavigationBar = ({
   signOutLabel,
   router,
   pathname,
-  disableSignUpButton = false,
+  disableSignOutButton = false,
 }: NavigationBarProps) => {
   return (
     <Wrapper
@@ -79,7 +79,7 @@ const NavigationBar = ({
           )
         )}
       </Wrapper>
-      {!disableSignUpButton && (
+      {!disableSignOutButton && (
         <Wrapper
           h={100}
           ac
