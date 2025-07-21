@@ -1,10 +1,5 @@
 import React from "react";
 
-export interface NavigationBarLayoutProps extends NavigationBarProps {
-  children: React.ReactNode;
-  disableSignOutButton?: boolean;
-}
-
 export interface NavigationBarProps {
   navigationConfigs: NavigationConfigs;
   logo?: React.ReactNode;
@@ -16,6 +11,7 @@ export interface NavigationBarProps {
   router: any;
   pathname: string;
   disableSignOutButton?: boolean;
+  width?: string;
 }
 
 export interface NavigationConfigs {

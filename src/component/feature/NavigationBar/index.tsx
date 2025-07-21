@@ -4,43 +4,7 @@ import { useState } from "react";
 import Wrapper from "../../common/Wrapper";
 import Txt from "../../common/Txt";
 import { capitalize } from "yeonpm-modules";
-import {
-  ArrowIconProps,
-  NavigationBarLayoutProps,
-  NavigationBarProps,
-  NavigationConfig,
-} from "./type";
-
-export const NavigationBarLayout = ({
-  navigationConfigs,
-  router,
-  pathname,
-  logo,
-  children,
-  disableSignOutButton,
-}: NavigationBarLayoutProps) => {
-  return (
-    <Wrapper
-      className="main-layout-wrapper"
-      overflowX="hidden"
-      overflowY="auto"
-      flex
-      fullV
-      bg="#F9FAFB"
-    >
-      <NavigationBar
-        navigationConfigs={navigationConfigs}
-        logo={logo}
-        router={router}
-        pathname={pathname}
-        disableSignOutButton={disableSignOutButton}
-      />
-      <Wrapper className="main-layout-body-wrapper" fullP>
-        {children}
-      </Wrapper>
-    </Wrapper>
-  );
-};
+import { ArrowIconProps, NavigationBarProps, NavigationConfig } from "./type";
 
 const NavigationBar = ({
   navigationConfigs,
@@ -50,15 +14,16 @@ const NavigationBar = ({
   router,
   pathname,
   disableSignOutButton = false,
+  width,
 }: NavigationBarProps) => {
   return (
     <Wrapper
       className="main-layout-navigation-bar-wrapper"
       h={"100%"}
-      minWidth={230}
       bg={"#ffffff"}
       column
       borderRight={"1px solid #f2f2f2"}
+      w={width}
     >
       {logo && (
         <Wrapper w="100%" ac h={100} jc>
@@ -117,7 +82,10 @@ const NavigationItem = ({
 }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasChildren = config.children && config.children.length > 0;
-  const path = `${parentPath ? `/${parentPath}` : ""}/${config.value}`;
+  const cleanedValue = config.value.replace(/^\//, "");
+  const path = parentPath
+    ? `${parentPath}/${cleanedValue}`
+    : `/${cleanedValue}`;
   const isNowPath = `${routePrefix}${path}` === pathname;
   const handleClick = () => {
     if (hasChildren) {
@@ -175,6 +143,8 @@ const NavigationItem = ({
                 depth={depth + 1}
                 routePrefix={routePrefix}
                 parentPath={path}
+                router={router}
+                pathname={pathname}
               />
             ))}
           </Wrapper>
